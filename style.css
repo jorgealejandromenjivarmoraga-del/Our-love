@@ -1,0 +1,53 @@
+/* General page setup */
+body {
+  background-color: #ffe6f0;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Intro section */
+.intro {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fade-title {
+  font-size: 5em;
+  color: #e63946;
+  animation: fadeShrink 4s ease forwards;
+}
+
+@keyframes fadeShrink {
+  0% { opacity: 1; transform: scale(1); }
+  70% { opacity: 1; transform: scale(0.8); }
+  100% { opacity: 0; transform: scale(0.5); }
+}
+
+/* Section layout */
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+/* Image styling */
+.left-img {
+  width: 60%;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.left-img:hover {
+  transform: scale(1.05);
+}
+
+/* Text styling */
+.right-text {
+  width: 30%;
+  font-size: 1.2em;
+}
