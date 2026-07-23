@@ -44,7 +44,7 @@ body {
 /* Image container */
 .image-container {
   position: relative;
-  width: 50%;
+  width: 48%;
   text-align: center;
 }
 
@@ -106,7 +106,7 @@ body {
 
 /* Text block */
 .right-text {
-  width: 50%;
+  width: 48%;
   opacity: 0;
   transition: opacity 2s ease;
   display: flex;
@@ -120,16 +120,17 @@ body {
 }
 
 .section-title {
-  font-size: 2.6em;
+  font-size: 2.8em;
   font-weight: 900;
   color: #e63946;
   margin-bottom: 25px;
 }
 
 .section-body {
-  font-size: 1.3em;
+  font-size: 1.35em;
   font-weight: 500;
   line-height: 1.55;
   max-width: 95%;
   margin-right: 20px; /* Pull text closer to image */
+  text-align: justify; /* Makes it visually balanced */
 }
