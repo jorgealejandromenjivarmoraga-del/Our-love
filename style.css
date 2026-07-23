@@ -16,7 +16,7 @@ body {
 }
 
 .fade-title {
-  font-size: 15vw;       /* 10 points smaller */
+  font-size: 14vw;       /* Slightly smaller for perfect fit */
   font-weight: 900;
   color: #e63946;
   opacity: 0;
@@ -33,20 +33,52 @@ body {
 /* Section layout */
 .section {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-around;
-  padding: 100px 50px;
+  padding: 80px 50px;
+}
+
+/* Image container for hover caption */
+.image-container {
+  position: relative;
+  width: 45%;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
 /* Image styling */
 .left-img {
-  width: 45%;
+  width: 100%;
   border-radius: 20px;
   opacity: 0;
-  transition: opacity 2s ease;
+  transition: opacity 2s ease, transform 0.5s ease;
 }
 
 .left-img.visible {
+  opacity: 1;
+}
+
+/* Hover zoom effect */
+.image-container:hover .left-img {
+  transform: scale(1.05);
+}
+
+/* Hover caption */
+.hover-caption {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(230, 57, 70, 0.9);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.image-container:hover .hover-caption {
   opacity: 1;
 }
 
@@ -62,14 +94,14 @@ body {
 }
 
 .section-title {
-  font-size: 1.8em;             /* Slightly smaller heading */
+  font-size: 1.6em;
   font-weight: 900;
   color: #e63946;
   margin-bottom: 15px;
 }
 
 .section-body {
-  font-size: 1em;               /* Smaller body text so it fits perfectly */
+  font-size: 0.95em;
   font-weight: 400;
   line-height: 1.5;
 }
