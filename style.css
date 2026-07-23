@@ -132,5 +132,9 @@ body {
   line-height: 1.55;
   max-width: 95%;
   margin-right: 20px; /* Pull text closer to image */
-  text-align: justify; /* Makes it visually balanced */
+  text-align: justify;
+  height: 100%; /* Ensures text fits image height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
