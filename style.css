@@ -33,7 +33,7 @@ body {
 /* Section layout */
 .section {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Align tops perfectly */
   justify-content: space-between;
   padding: 80px 100px;
   gap: 80px;
@@ -111,8 +111,9 @@ body {
   transition: opacity 2s ease;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   height: 100%; /* Match image height */
+  padding-top: 0; /* Align top edge */
 }
 
 .right-text.visible {
@@ -131,10 +132,6 @@ body {
   font-weight: 500;
   line-height: 1.55;
   max-width: 95%;
-  margin-right: 20px; /* Pull text closer to image */
+  margin-right: 20px;
   text-align: justify;
-  height: 100%; /* Ensures text fits image height */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
