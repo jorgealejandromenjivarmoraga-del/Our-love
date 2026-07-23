@@ -1,7 +1,7 @@
 /* General page setup */
 body {
   background-color: #ffe6f0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Pacifico', cursive; /* Handwritten style */
   margin: 0;
   padding: 0;
   color: #333;
@@ -16,11 +16,12 @@ body {
 }
 
 .fade-title {
-  font-size: 8em;       /* Big */
-  font-weight: bold;    /* Bold */
+  font-size: 12em;       /* Much larger */
+  font-weight: 700;      /* Bold */
   color: #e63946;
   opacity: 0;
   animation: fadeIn 3s ease forwards;
+  text-align: center;
 }
 
 @keyframes fadeIn {
@@ -33,13 +34,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 50px;
+  padding: 100px 50px;
 }
 
 /* Image styling */
 .left-img {
-  width: 60%;
-  border-radius: 15px;
+  width: 50%;
+  border-radius: 20px;
   opacity: 0;                 /* Hidden initially */
   transition: opacity 2s ease;
 }
@@ -50,8 +51,8 @@ body {
 
 /* Text styling */
 .right-text {
-  width: 30%;
-  font-size: 1.2em;
+  width: 40%;
+  font-size: 2em;
   opacity: 0;                 /* Hidden initially */
   transition: opacity 2s ease;
 }
