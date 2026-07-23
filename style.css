@@ -16,9 +16,10 @@ body {
 }
 
 .fade-title {
-  font-size: 8em;       /* Bigger */
+  font-size: 8em;       /* Big */
   font-weight: bold;    /* Bold */
   color: #e63946;
+  opacity: 0;
   animation: fadeIn 3s ease forwards;
 }
 
@@ -51,4 +52,10 @@ body {
 .right-text {
   width: 30%;
   font-size: 1.2em;
+  opacity: 0;                 /* Hidden initially */
+  transition: opacity 2s ease;
+}
+
+.right-text.visible {
+  opacity: 1;                 /* Fade in when scrolled */
 }
