@@ -17,7 +17,7 @@
   <div class="section">
     <div class="image-container">
       <img src="1stpic.jpeg" class="left-img" alt="Us together">
-      <div class="hover-caption">Yushan Mountain, January 24th, 2026</div>
+      <p class="hover-underline caption">Yushan Mountain, January 24th, 2026</p>
     </div>
     <div class="right-text">
       <h2 class="section-title">January – OUR Start</h2>
@@ -36,11 +36,3 @@
       const img = document.querySelector('.left-img');
       const text = document.querySelector('.right-text');
       const rect = img.getBoundingClientRect();
-      if (rect.top < window.innerHeight) {
-        img.classList.add('visible');
-        text.classList.add('visible');
-      }
-    });
-  </script>
-</body>
-</html>
