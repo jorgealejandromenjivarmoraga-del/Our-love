@@ -34,7 +34,7 @@ body {
 .section {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 80px 100px;
   gap: 80px;
   max-width: 1400px;
