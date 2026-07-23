@@ -46,6 +46,12 @@ body {
   text-align: center;
 }
 
+/* Hover area (only triggers zoom) */
+.image-hover-area {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
 /* Image styling */
 .left-img {
   width: 100%;
@@ -59,13 +65,13 @@ body {
 }
 
 /* Hover zoom effect */
-.image-container:hover .left-img {
+.image-hover-area:hover .left-img {
   transform: scale(1.05);
 }
 
 /* Caption styling */
 .caption {
-  margin-top: 12px;
+  margin-top: 20px; /* Moved further down */
   font-weight: 700;
   font-size: 1.1em;
   color: #333;
@@ -93,9 +99,9 @@ body {
   transform-origin: left;
 }
 
-/* Trigger underline only when hovering the image container */
-.image-container:hover .hover-underline::after,
-.image-container:hover .hover-underline::before {
+/* Trigger underline only when hovering the image area */
+.image-hover-area:hover + .hover-underline::after,
+.image-hover-area:hover + .hover-underline::before {
   transform: scaleX(1);
 }
 
