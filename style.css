@@ -16,7 +16,7 @@ body {
 }
 
 .fade-title {
-  font-size: 16vw;       /* Slightly smaller than before */
+  font-size: 15vw;       /* 10 points smaller */
   font-weight: 900;
   color: #e63946;
   opacity: 0;
@@ -42,34 +42,34 @@ body {
 .left-img {
   width: 45%;
   border-radius: 20px;
-  opacity: 0;                 /* Hidden initially */
+  opacity: 0;
   transition: opacity 2s ease;
 }
 
 .left-img.visible {
-  opacity: 1;                 /* Fade in when scrolled */
+  opacity: 1;
 }
 
 /* Text styling */
 .right-text {
   width: 45%;
-  opacity: 0;                 /* Hidden initially */
+  opacity: 0;
   transition: opacity 2s ease;
 }
 
 .right-text.visible {
-  opacity: 1;                 /* Fade in when scrolled */
+  opacity: 1;
 }
 
 .section-title {
-  font-size: 2em;             /* Bold heading */
+  font-size: 1.8em;             /* Slightly smaller heading */
   font-weight: 900;
   color: #e63946;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .section-body {
-  font-size: 1.1em;           /* Smaller body text */
+  font-size: 1em;               /* Smaller body text so it fits perfectly */
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
 }
