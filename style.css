@@ -1,4 +1,4 @@
-/* General page setup */
+/* General setup */
 body {
   background-color: #ffe6f0;
   font-family: 'Montserrat', sans-serif;
@@ -7,7 +7,7 @@ body {
   color: #333;
 }
 
-/* Intro section */
+/* Intro */
 .intro {
   height: 100vh;
   display: flex;
@@ -48,7 +48,6 @@ body {
   text-align: center;
 }
 
-/* Hover area (only triggers zoom) */
 .image-hover-area {
   overflow: hidden;
   border-radius: 20px;
@@ -56,7 +55,6 @@ body {
   width: 100%;
 }
 
-/* Image styling */
 .left-img {
   width: 100%;
   border-radius: 20px;
@@ -68,12 +66,11 @@ body {
   opacity: 1;
 }
 
-/* Hover zoom effect */
 .image-hover-area:hover .left-img {
   transform: scale(1.05);
 }
 
-/* Caption styling */
+/* Caption */
 .caption {
   margin-top: 30px;
   font-weight: 700;
@@ -83,7 +80,6 @@ body {
   display: inline-block;
 }
 
-/* Hover underline gradient effect */
 .hover-underline::after,
 .hover-underline::before {
   content: '';
@@ -103,13 +99,12 @@ body {
   transform-origin: left;
 }
 
-/* Trigger underline only when hovering the image area */
 .image-hover-area:hover + .hover-underline::after,
 .image-hover-area:hover + .hover-underline::before {
   transform: scaleX(1);
 }
 
-/* Text styling */
+/* Text block */
 .right-text {
   width: 50%;
   opacity: 0;
@@ -117,7 +112,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: auto;
+  height: 100%; /* Match image height */
 }
 
 .right-text.visible {
@@ -125,15 +120,16 @@ body {
 }
 
 .section-title {
-  font-size: 2.8em; /* Larger heading */
+  font-size: 2.6em;
   font-weight: 900;
   color: #e63946;
   margin-bottom: 25px;
 }
 
 .section-body {
-  font-size: 1.45em; /* Bigger paragraph text */
+  font-size: 1.3em;
   font-weight: 500;
-  line-height: 1.6;
-  max-width: 95%; /* Slightly wider text block */
+  line-height: 1.55;
+  max-width: 95%;
+  margin-right: 20px; /* Pull text closer to image */
 }
