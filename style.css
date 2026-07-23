@@ -93,6 +93,7 @@ body {
   transform-origin: left;
 }
 
+/* Trigger underline only when hovering the image container */
 .image-container:hover .hover-underline::after,
 .image-container:hover .hover-underline::before {
   transform: scaleX(1);
