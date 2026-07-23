@@ -33,10 +33,10 @@ body {
 /* Section layout */
 .section {
   display: flex;
-  align-items: center; /* Centers text vertically with image */
+  align-items: center;
   justify-content: center;
   padding: 80px 100px;
-  gap: 80px; /* Wider gap for balance */
+  gap: 80px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -44,7 +44,7 @@ body {
 /* Image container */
 .image-container {
   position: relative;
-  flex: 1 1 50%; /* Ensures image keeps half width */
+  width: 50%;
   text-align: center;
 }
 
@@ -75,7 +75,7 @@ body {
 
 /* Caption styling */
 .caption {
-  margin-top: 35px;
+  margin-top: 30px;
   font-weight: 700;
   font-size: 1.1em;
   color: #333;
@@ -111,13 +111,13 @@ body {
 
 /* Text styling */
 .right-text {
-  flex: 1 1 50%; /* Matches image width */
+  width: 50%;
   opacity: 0;
   transition: opacity 2s ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  height: auto;
 }
 
 .right-text.visible {
