@@ -20,5 +20,16 @@
       <p>Our first laughs, our first calls — everything felt new and perfect.</p>
     </div>
   </div>
+
+  <!-- JavaScript for scroll fade-in -->
+  <script>
+    window.addEventListener('scroll', function() {
+      const img = document.querySelector('.left-img');
+      const rect = img.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        img.classList.add('visible');
+      }
+    });
+  </script>
 </body>
 </html>
