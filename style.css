@@ -33,7 +33,7 @@ body {
 /* Section layout */
 .section {
   display: flex;
-  align-items: center; /* Vertically align text with image */
+  align-items: center;
   justify-content: space-between;
   padding: 80px 100px;
   gap: 80px;
@@ -125,15 +125,15 @@ body {
 }
 
 .section-title {
-  font-size: 2.6em; /* Larger heading */
+  font-size: 2.8em; /* Larger heading */
   font-weight: 900;
   color: #e63946;
   margin-bottom: 25px;
 }
 
 .section-body {
-  font-size: 1.35em; /* Bigger paragraph text */
+  font-size: 1.45em; /* Bigger paragraph text */
   font-weight: 500;
-  line-height: 1.7;
-  max-width: 90%; /* Keeps text compact beside image */
+  line-height: 1.6;
+  max-width: 95%; /* Slightly wider text block */
 }
