@@ -77,7 +77,7 @@ body {
 .caption {
   margin-top: 30px;
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 1.2em;
   color: #333;
   position: relative;
   display: inline-block;
@@ -125,14 +125,14 @@ body {
 }
 
 .section-title {
-  font-size: 1.8em;
+  font-size: 2.4em; /* Increased for stronger presence */
   font-weight: 900;
   color: #e63946;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .section-body {
-  font-size: 1.05em;
-  font-weight: 400;
-  line-height: 1.6;
+  font-size: 1.25em; /* Bigger paragraph text */
+  font-weight: 500;
+  line-height: 1.7;
 }
