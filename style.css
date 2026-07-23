@@ -1,7 +1,7 @@
 /* General page setup */
 body {
   background-color: #ffe6f0;
-  font-family: 'Great Vibes', cursive; /* Handwritten style */
+  font-family: 'Montserrat', sans-serif; /* Bold modern font */
   margin: 0;
   padding: 0;
   color: #333;
@@ -16,13 +16,13 @@ body {
 }
 
 .fade-title {
-  font-size: 18vw;       /* Covers most of the screen */
-  font-weight: 700;      /* Bold look */
+  font-size: 20vw;       /* Covers most of the screen */
+  font-weight: 900;      /* Extra bold */
   color: #e63946;
   opacity: 0;
   animation: fadeIn 3s ease forwards;
   text-align: center;
-  line-height: 1.1;
+  letter-spacing: 0.05em;
 }
 
 @keyframes fadeIn {
@@ -53,7 +53,7 @@ body {
 /* Text styling */
 .right-text {
   width: 40%;
-  font-size: 2em;
+  font-size: 1.8em;
   opacity: 0;                 /* Hidden initially */
   transition: opacity 2s ease;
 }
