@@ -13,7 +13,7 @@
     <h1 class="fade-title">OUR STORY</h1>
   </div>
 
-  <!-- First Section -->
+  <!-- January Section -->
   <div class="section">
     <img src="1stpic.jpeg" class="left-img" alt="Us together">
     <div class="right-text">
@@ -31,4 +31,13 @@
   <script>
     window.addEventListener('scroll', function() {
       const img = document.querySelector('.left-img');
-      const text = document.querySelector('.right
+      const text = document.querySelector('.right-text');
+      const rect = img.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        img.classList.add('visible');
+        text.classList.add('visible');
+      }
+    });
+  </script>
+</body>
+</html>
