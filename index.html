@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Love</title>
+  <!-- Google Font similar to the handwritten style -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,4 +27,13 @@
   <script>
     window.addEventListener('scroll', function() {
       const img = document.querySelector('.left-img');
-      const text = document.querySelector('.right
+      const text = document.querySelector('.right-text');
+      const rect = img.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        img.classList.add('visible');
+        text.classList.add('visible');
+      }
+    });
+  </script>
+</body>
+</html>
