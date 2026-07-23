@@ -32,7 +32,7 @@ body {
 /* Section layout */
 .section {
   display: flex;
-  align-items: flex-start; /* Align top edges */
+  align-items: flex-start;
   justify-content: space-between;
   padding: 80px 100px;
   gap: 60px;
@@ -71,7 +71,7 @@ body {
 
 /* Caption styling */
 .caption {
-  margin-top: 30px; /* More spacing to avoid collision */
+  margin-top: 35px; /* More spacing to avoid collision */
   font-weight: 700;
   font-size: 1.1em;
   color: #333;
@@ -112,7 +112,8 @@ body {
   transition: opacity 2s ease;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically center text relative to image */
+  justify-content: space-between; /* Text fills image height */
+  height: 100%; /* Match image height */
 }
 
 .right-text.visible {
