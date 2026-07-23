@@ -16,7 +16,7 @@ body {
 }
 
 .fade-title {
-  font-size: 18vw;       /* Adjusted for "OUR STORY" */
+  font-size: 16vw;       /* Slightly smaller than before */
   font-weight: 900;
   color: #e63946;
   opacity: 0;
@@ -33,7 +33,7 @@ body {
 /* Section layout */
 .section {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
   padding: 100px 50px;
 }
@@ -42,34 +42,34 @@ body {
 .left-img {
   width: 45%;
   border-radius: 20px;
-  opacity: 0;
+  opacity: 0;                 /* Hidden initially */
   transition: opacity 2s ease;
 }
 
 .left-img.visible {
-  opacity: 1;
+  opacity: 1;                 /* Fade in when scrolled */
 }
 
 /* Text styling */
 .right-text {
   width: 45%;
-  opacity: 0;
+  opacity: 0;                 /* Hidden initially */
   transition: opacity 2s ease;
 }
 
 .right-text.visible {
-  opacity: 1;
+  opacity: 1;                 /* Fade in when scrolled */
 }
 
 .section-title {
-  font-size: 2.5em;
+  font-size: 2em;             /* Bold heading */
   font-weight: 900;
   color: #e63946;
   margin-bottom: 20px;
 }
 
 .section-body {
-  font-size: 1.2em;
+  font-size: 1.1em;           /* Smaller body text */
   font-weight: 400;
   line-height: 1.6;
 }
