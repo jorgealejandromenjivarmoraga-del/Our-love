@@ -1,9 +1,15 @@
-// Make everything visible immediately on load
+// Run once the page is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('.left-img').classList.add('visible');
-  document.querySelector('.right-text').classList.add('visible');
-  document.querySelector('.caption').classList.add('visible');
-  document.querySelector('.collage-section').classList.add('visible');
+  const img = document.querySelector('.left-img');
+  const text = document.querySelector('.right-text');
+  const caption = document.querySelector('.caption');
+  const collage = document.querySelector('.collage-section');
+
+  // Add visible classes immediately so nothing stays hidden
+  if (img) img.classList.add('visible');
+  if (text) text.classList.add('visible');
+  if (caption) caption.classList.add('visible');
+  if (collage) collage.classList.add('visible');
 });
 
 // Modal viewer logic
