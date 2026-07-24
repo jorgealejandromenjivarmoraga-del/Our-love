@@ -145,7 +145,7 @@ body {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1.5s ease, transform 1.5s ease;
-  margin-top: 20px; /* reduced space between collage and January section */
+  margin-top: 20px;
 }
 
 .collage-section.visible {
@@ -159,41 +159,26 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  height: 650px; /* ensures diagonal layout spacing */
+  height: 650px;
 }
 
-/* Positioning for diagonal layout */
 .collage-container img {
   position: absolute;
   width: 300px;
   aspect-ratio: 1;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-.collage-container img.upper-left {
-  top: 0;
-  left: 0;
-}
+/* Positioning */
+.collage-container img.upper-left { top: 0; left: 0; }
+.collage-container img.upper-right { top: 0; right: 0; }
+.collage-container img.lower-left { bottom: 0; left: 0; }
+.collage-container img.lower-right { bottom: 0; right: 0; }
 
-.collage-container img.upper-right {
-  top: 0;
-  right: 0;
-}
-
-.collage-container img.lower-left {
-  bottom: 0;
-  left: 0;
-}
-
-.collage-container img.lower-right {
-  bottom: 0;
-  right: 0;
-}
-
-/* Heart shape (modern CSS method) */
+/* Heart shape */
 img.heart-shape {
   object-fit: cover;
-  object-position: 50% 80%; /* focuses lower part (shoes visible) */
+  object-position: 50% 80%;
   -webkit-mask:
     radial-gradient(at 70% 31%, #000 29%, #0000 30%),
     radial-gradient(at 30% 31%, #000 29%, #0000 30%),
@@ -205,8 +190,18 @@ img.heart-shape {
   clip-path: polygon(-41% 0, 50% 91%, 141% 0);
 }
 
+/* Heart hover glow */
+img.heart-shape:hover {
+  box-shadow: 0 0 25px 10px rgba(255, 0, 100, 0.6);
+}
+
 /* Square shape */
 img.square-shape {
   object-fit: cover;
   border-radius: 20px;
+}
+
+/* Square hover glow */
+img.square-shape:hover {
+  box-shadow: 0 0 25px 10px rgba(255, 100, 150, 0.6);
 }
