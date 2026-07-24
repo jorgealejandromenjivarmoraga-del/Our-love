@@ -145,7 +145,7 @@ body {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1.5s ease, transform 1.5s ease;
-  margin-top: 120px;
+  margin-top: 60px; /* closer to January section */
 }
 
 .collage-section.visible {
@@ -157,6 +157,7 @@ body {
 .collage-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
   gap: 40px;
   justify-items: center;
   align-items: center;
@@ -164,11 +165,18 @@ body {
   margin: 0 auto;
 }
 
+/* Positioning for diagonal layout */
+.collage-container img:nth-child(1) { grid-area: 1 / 1; } /* upper left heart */
+.collage-container img:nth-child(2) { grid-area: 2 / 2; } /* lower right heart */
+.collage-container img:nth-child(3) { grid-area: 1 / 2; } /* upper right square */
+.collage-container img:nth-child(4) { grid-area: 2 / 1; } /* lower left square */
+
 /* Heart shape (modern CSS method) */
 img.heart-shape {
   width: 300px;
   aspect-ratio: 1;
   object-fit: cover;
+  object-position: center bottom; /* focuses lower part (shoes visible) */
   -webkit-mask:
     radial-gradient(at 70% 31%, #000 29%, #0000 30%),
     radial-gradient(at 30% 31%, #000 29%, #0000 30%),
