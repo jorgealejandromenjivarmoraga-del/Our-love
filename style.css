@@ -18,9 +18,15 @@ body {
 /* Image container */
 .image-container { width: 48%; text-align: center; }
 .image-hover-area { overflow: hidden; border-radius: 20px; display: inline-block; width: 100%; }
-.left-img { width: 100%; border-radius: 20px; opacity: 0; transform: translateY(30px); transition: opacity 1.5s ease, transform 1.5s ease; }
-.left-img.visible { opacity: 1; transform: translateY(0); }
-.image-hover-area:hover .left-img { transform: scale(1.05); }
+.left-img, .right-img {
+  width: 100%;
+  border-radius: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+.left-img.visible, .right-img.visible { opacity: 1; transform: translateY(0); }
+.image-hover-area:hover .left-img, .image-hover-area:hover .right-img { transform: scale(1.05); }
 
 /* Caption underline effect */
 .caption { margin-top: 25px; font-weight: 700; font-size: 1.2em; color: #333; position: relative; display: inline-block; text-align: center; opacity: 0; transform: translateY(20px); transition: opacity 1.5s ease, transform 1.5s ease; }
@@ -30,9 +36,14 @@ body {
 .hover-underline::after { bottom: -5px; transform-origin: right; }
 .image-hover-area:hover + .hover-underline::after, .image-hover-area:hover + .hover-underline::before { transform: scaleX(1); }
 
-/* Text block */
-.right-text { width: 48%; opacity: 0; transform: translateY(30px); transition: opacity 1.5s ease, transform 1.5s ease; }
-.right-text.visible { opacity: 1; transform: translateY(0); }
+/* Text blocks */
+.right-text, .left-text {
+  width: 48%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+.right-text.visible, .left-text.visible { opacity: 1; transform: translateY(0); }
 .section-title { font-size: 2.55em; font-weight: 900; color: #e63946; margin-bottom: 25px; }
 .section-body { font-size: 1.22em; line-height: 1.55; text-align: justify; }
 
@@ -48,40 +59,4 @@ body {
 
 /* Heart shape + neon glow */
 .heart-shape { object-fit: cover; object-position: 50% 80%; -webkit-mask: radial-gradient(at 70% 31%, #000 29%, #0000 30%), radial-gradient(at 30% 31%, #000 29%, #0000 30%), linear-gradient(#000 0 0) bottom/100% 50% no-repeat; mask: radial-gradient(at 70% 31%, #000 29%, #0000 30%), radial-gradient(at 30% 31%, #000 29%, #0000 30%), linear-gradient(#000 0 0) bottom/100% 50% no-repeat; clip-path: polygon(-41% 0, 50% 91%, 141% 0); }
-.heart-shape:hover { filter: drop-shadow(0 0 20px #ff004c) drop-shadow(0 0 40px #ff004c) drop-shadow(0 0 80px #ff004c); transform: scale(1.05); }
-
-/* Square shape + neon glow */
-.square-shape { object-fit: cover; border-radius: 20px; }
-.square-shape:hover { filter: drop-shadow(0 0 20px #ff66b2) drop-shadow(0 0 40px #ff66b2) drop-shadow(0 0 80px #ff66b2); transform: scale(1.05); }
-
-/* Modal Viewer */
-.viewer { position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); display:none; justify-content:center; align-items:center; z-index:9999; }
-.viewer.active { display:flex; }
-.viewer img { max-width:90%; max-height:90%; border-radius:10px; box-shadow:0 0 40px rgba(255,255,255,0.4); }
-.close-btn { position:absolute; top:20px; right:30px; font-size:40px; color:#fff; cursor:pointer; }
-
-/* February text block on left */
-.left-text {
-  width: 48%;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1.5s ease, transform 1.5s ease;
-}
-.left-text.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Right-side image */
-.right-img {
-  width: 100%;
-  border-radius: 20px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1.5s ease, transform 1.5s ease;
-}
-.right-img.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+.heart-shape:hover { filter: drop-shadow(0 0 20px #ff004c) drop-shadow(0 0 40px #ff004c) drop-shadow
