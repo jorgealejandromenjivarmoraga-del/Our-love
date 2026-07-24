@@ -166,7 +166,7 @@ body {
   position: absolute;
   width: 300px;
   aspect-ratio: 1;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transition: transform 0.5s ease, filter 0.5s ease;
 }
 
 /* Positioning */
@@ -190,9 +190,12 @@ img.heart-shape {
   clip-path: polygon(-41% 0, 50% 91%, 141% 0);
 }
 
-/* Heart hover glow */
+/* Heart hover neon glow */
 img.heart-shape:hover {
-  box-shadow: 0 0 25px 10px rgba(255, 0, 100, 0.6);
+  filter: drop-shadow(0 0 15px #ff004c)
+          drop-shadow(0 0 30px #ff004c)
+          drop-shadow(0 0 45px #ff004c);
+  transform: scale(1.05);
 }
 
 /* Square shape */
@@ -201,7 +204,10 @@ img.square-shape {
   border-radius: 20px;
 }
 
-/* Square hover glow */
+/* Square hover neon glow */
 img.square-shape:hover {
-  box-shadow: 0 0 25px 10px rgba(255, 100, 150, 0.6);
+  filter: drop-shadow(0 0 15px #ff66b2)
+          drop-shadow(0 0 30px #ff66b2)
+          drop-shadow(0 0 45px #ff66b2);
+  transform: scale(1.05);
 }
