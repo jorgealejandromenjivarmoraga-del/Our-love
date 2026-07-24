@@ -4,6 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const caption = document.querySelector(".caption");
   const collage = document.querySelector(".collage-section");
 
+  // February
+  document.querySelector(".right-img")?.classList.add("visible");
+  document.querySelector(".left-text")?.classList.add("visible");
+});
+
   if (img) img.classList.add("visible");
   if (text) text.classList.add("visible");
   if (caption) caption.classList.add("visible");
