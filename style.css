@@ -59,3 +59,29 @@ body {
 .viewer.active { display:flex; }
 .viewer img { max-width:90%; max-height:90%; border-radius:10px; box-shadow:0 0 40px rgba(255,255,255,0.4); }
 .close-btn { position:absolute; top:20px; right:30px; font-size:40px; color:#fff; cursor:pointer; }
+
+/* February text block on left */
+.left-text {
+  width: 48%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+.left-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Right-side image */
+.right-img {
+  width: 100%;
+  border-radius: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+.right-img.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
