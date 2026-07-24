@@ -169,21 +169,8 @@ img.heart-shape {
 
 /* Heart hover neon glow */
 img.heart-shape:hover {
-  filter: drop-shadow(0 0 20px #ff004c)
-          drop-shadow(0 0 40px #ff004c)
-          drop-shadow(0 0 80px #ff004c)
-          drop-shadow(0 0 120px #ff004c);
-  transform: scale(1.05);
-}
-
-/* Square shape */
-img.square-shape {
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-/* Square hover neon glow */
-img.square-shape:hover {
-  filter: drop-shadow(0 0 20px #ff66b2)
-          drop-shadow(0 0 40px #ff66b2)
-          drop
+  filter: drop-shadow(0 0 25px #ff004c)
+          drop-shadow(0 0 50px #ff004c)
+          drop-shadow(0 0 100px #ff004c)
+          drop-shadow(0 0 150px #ff004c);
+  transform: scale
