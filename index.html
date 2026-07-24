@@ -43,7 +43,14 @@
     </div>
   </div>
 
+  <!-- Fullscreen Viewer -->
+  <div id="viewer" class="viewer">
+    <span class="close-btn">&times;</span>
+    <img id="viewer-img" src="" alt="Expanded view">
+  </div>
+
   <script>
+    // Fade‑in animation
     window.addEventListener('scroll', function() {
       const img = document.querySelector('.left-img');
       const text = document.querySelector('.right-text');
@@ -58,6 +65,24 @@
       if (rectCollage.top < window.innerHeight) {
         collage.classList.add('visible');
       }
+    });
+
+    // Click‑to‑expand viewer
+    const collageImages = document.querySelectorAll('.collage-container img');
+    const viewer = document.getElementById('viewer');
+    const viewerImg = document.getElementById('viewer-img');
+    const closeBtn = document.querySelector('.close-btn');
+
+    collageImages.forEach(img => {
+      img.addEventListener('click', () => {
+        viewerImg.src = img.src;
+        viewer.classList.add('active');
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      viewer.classList.remove('active');
+      viewerImg.src = '';
     });
   </script>
 </body>
