@@ -13,6 +13,4 @@ window.addEventListener('scroll', function() {
 });
 
 // Modal viewer logic
-const collageImages = document.querySelectorAll('.collage-container img');
-const viewer = document.getElementById('viewer');
-const viewer
+const collageImages = document.querySelectorAll('.
