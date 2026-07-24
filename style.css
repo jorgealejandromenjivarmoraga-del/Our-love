@@ -153,13 +153,15 @@ body {
   transform: translateY(0);
 }
 
+/* Collage layout using grid */
 .collage-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
   gap: 25px;
   max-width: 1200px;
   margin: 0 auto;
+  justify-items: center;
 }
 
 /* Heart and Square Frames */
@@ -172,14 +174,36 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
 }
 
 /* Heart shape */
 .collage-item.heart {
   width: 280px;
   height: 250px;
-  clip-path: path("M140 240 C60 180, 0 120, 70 60 C100 30, 140 0, 180 30 C220 0, 260 30, 290 60 C360 120, 300 180, 220 240 Z");
+  clip-path: polygon(
+    50% 0%,
+    61% 10%,
+    70% 20%,
+    78% 30%,
+    84% 40%,
+    88% 50%,
+    90% 60%,
+    88% 70%,
+    84% 80%,
+    78% 90%,
+    70% 100%,
+    50% 85%,
+    30% 100%,
+    22% 90%,
+    16% 80%,
+    12% 70%,
+    10% 60%,
+    12% 50%,
+    16% 40%,
+    22% 30%,
+    30% 20%,
+    39% 10%
+  );
 }
 
 /* Square shape */
