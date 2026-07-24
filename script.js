@@ -1,4 +1,3 @@
-// Fade‑in visibility
 document.addEventListener("DOMContentLoaded", () => {
   const img = document.querySelector(".left-img");
   const text = document.querySelector(".right-text");
@@ -7,18 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const rightImg = document.querySelector(".right-img");
   const leftText = document.querySelector(".left-text");
 
-  // January visibility
   if (img) img.classList.add("visible");
   if (text) text.classList.add("visible");
   if (caption) caption.classList.add("visible");
   if (collage) collage.classList.add("visible");
-
-  // February visibility
   if (rightImg) rightImg.classList.add("visible");
   if (leftText) leftText.classList.add("visible");
 });
 
-// 🖼️ Image viewer logic
+// Viewer logic
 const collageImages = document.querySelectorAll(".collage-container img");
 const viewer = document.getElementById("viewer");
 const viewerImg = document.getElementById("viewer-img");
