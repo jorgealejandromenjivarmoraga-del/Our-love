@@ -1,8 +1,5 @@
-// Fade-in animation
+// Ensure animations trigger on scroll
 window.addEventListener('scroll', function() {
   const img = document.querySelector('.left-img');
   const text = document.querySelector('.right-text');
-  const caption = document.querySelector('.caption');
-  const collage = document.querySelector('.collage-section');
-
-  if (img.getBoundingClientRect().
+  const caption = document.querySelector('.caption
