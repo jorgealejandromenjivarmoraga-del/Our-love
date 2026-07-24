@@ -145,7 +145,7 @@ body {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1.5s ease, transform 1.5s ease;
-  margin-top: 60px; /* closer to January section */
+  margin-top: 20px; /* reduced space between collage and January section */
 }
 
 .collage-section.visible {
@@ -155,28 +155,45 @@ body {
 
 /* Collage layout */
 .collage-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
-  gap: 40px;
-  justify-items: center;
-  align-items: center;
+  position: relative;
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  height: 650px; /* ensures diagonal layout spacing */
 }
 
 /* Positioning for diagonal layout */
-.collage-container img:nth-child(1) { grid-area: 1 / 1; } /* upper left heart */
-.collage-container img:nth-child(2) { grid-area: 2 / 2; } /* lower right heart */
-.collage-container img:nth-child(3) { grid-area: 1 / 2; } /* upper right square */
-.collage-container img:nth-child(4) { grid-area: 2 / 1; } /* lower left square */
+.collage-container img {
+  position: absolute;
+  width: 300px;
+  aspect-ratio: 1;
+  transition: transform 0.5s ease;
+}
+
+.collage-container img.upper-left {
+  top: 0;
+  left: 0;
+}
+
+.collage-container img.upper-right {
+  top: 0;
+  right: 0;
+}
+
+.collage-container img.lower-left {
+  bottom: 0;
+  left: 0;
+}
+
+.collage-container img.lower-right {
+  bottom: 0;
+  right: 0;
+}
 
 /* Heart shape (modern CSS method) */
 img.heart-shape {
-  width: 300px;
-  aspect-ratio: 1;
   object-fit: cover;
-  object-position: center bottom; /* focuses lower part (shoes visible) */
+  object-position: 50% 80%; /* focuses lower part (shoes visible) */
   -webkit-mask:
     radial-gradient(at 70% 31%, #000 29%, #0000 30%),
     radial-gradient(at 30% 31%, #000 29%, #0000 30%),
@@ -190,8 +207,6 @@ img.heart-shape {
 
 /* Square shape */
 img.square-shape {
-  width: 300px;
-  aspect-ratio: 1;
   object-fit: cover;
   border-radius: 20px;
 }
