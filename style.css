@@ -194,4 +194,6 @@ body {
 .viewer.active { display: flex; }
 .viewer img {
   max-width: 90%;
-  max-height: 90
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 
