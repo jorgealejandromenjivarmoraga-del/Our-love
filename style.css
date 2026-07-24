@@ -113,6 +113,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  margin-top: -25px; /* Moves text slightly upward */
 }
 
 .right-text.visible {
@@ -120,14 +121,14 @@ body {
 }
 
 .section-title {
-  font-size: 2.8em;
+  font-size: 2.6em; /* Slightly smaller heading */
   font-weight: 900;
   color: #e63946;
   margin-bottom: 25px;
 }
 
 .section-body {
-  font-size: 1.35em;
+  font-size: 1.25em; /* Reduced by ~2 points */
   font-weight: 500;
   line-height: 1.55;
   max-width: 95%;
