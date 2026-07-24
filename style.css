@@ -142,6 +142,7 @@ body {
   position: absolute;
   width: 300px;
   aspect-ratio: 1;
+  cursor: pointer;
   transition: transform 0.5s ease, filter 0.5s ease;
 }
 
@@ -168,10 +169,10 @@ img.heart-shape {
 
 /* Heart hover neon glow */
 img.heart-shape:hover {
-  filter: drop-shadow(0 0 10px #ff004c)
-          drop-shadow(0 0 25px #ff004c)
-          drop-shadow(0 0 50px #ff004c)
-          drop-shadow(0 0 80px #ff004c);
+  filter: drop-shadow(0 0 20px #ff004c)
+          drop-shadow(0 0 40px #ff004c)
+          drop-shadow(0 0 80px #ff004c)
+          drop-shadow(0 0 120px #ff004c);
   transform: scale(1.05);
 }
 
@@ -183,9 +184,6 @@ img.square-shape {
 
 /* Square hover neon glow */
 img.square-shape:hover {
-  filter: drop-shadow(0 0 10px #ff66b2)
-          drop-shadow(0 0 25px #ff66b2)
-          drop-shadow(0 0 50px #ff66b2)
-          drop-shadow(0 0 80px #ff66b2);
-  transform: scale(1.05);
-}
+  filter: drop-shadow(0 0 20px #ff66b2)
+          drop-shadow(0 0 40px #ff66b2)
+          drop
