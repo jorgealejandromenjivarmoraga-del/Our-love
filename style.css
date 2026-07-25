@@ -116,3 +116,20 @@ body {
   justify-content: center;
   margin-top: 50px; /* lowers the image slightly */
 }
+
+/* June single-image hover effect */
+.june-img {
+  --_g: 10%/45% 45% no-repeat conic-gradient(#000 0 0);
+  mask:
+    left   var(--_i,) top    var(--_g),
+    bottom var(--_i,) left   var(--_g),
+    top    var(--_i,) right  var(--_g),
+    right  var(--_i,) bottom var(--_g);
+  filter: grayscale();
+  transition: .3s linear;
+  cursor: pointer;
+}
+.june-img:hover {
+  --_i: 10%;
+  filter: grayscale(0);
+}
