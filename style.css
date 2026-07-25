@@ -240,7 +240,7 @@ body {
 }
 .wave-text span {
   display: inline-block;
-  font-size: 14rem; /* half of OUR STORY title */
+  font-size: 8rem; /* half of OUR STORY title */
   font-weight: 900;
   animation: wave 2s ease-in-out infinite;
 }
