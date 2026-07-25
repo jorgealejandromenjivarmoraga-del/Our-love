@@ -234,7 +234,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
   background: #101010;
   color: #fff;
   font-family: 'Arial', sans-serif;
@@ -261,6 +260,7 @@ body {
   50% { transform: translateY(-20px); }
 }
 
+
 /* Restore collage layout for April–May */
 .collage-section {
   margin-top: 40px;
@@ -279,5 +279,30 @@ body {
   position: absolute;
   border-radius: 20px;
   transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* June + July grayscale-to-color hover effect */
+.june-img,
+.july-img {
+  --_g: 10%/45% 45% no-repeat conic-gradient(#000 0 0);
+  -webkit-mask:
+    left   var(--_i,) top    var(--_g),
+    bottom var(--_i,) left   var(--_g),
+    top    var(--_i,) right  var(--_g),
+    right  var(--_i,) bottom var(--_g);
+  mask:
+    left   var(--_i,) top    var(--_g),
+    bottom var(--_i,) left   var(--_g),
+    top    var(--_i,) right  var(--_g),
+    right  var(--_i,) bottom var(--_g);
+  filter: grayscale();
+  transition: .3s linear;
+  cursor: pointer;
+}
+.june-img:hover,
+.july-img:hover {
+  --_i: 10%;
+  filter: grayscale(0);
+  transform: none !important;
 }
 
