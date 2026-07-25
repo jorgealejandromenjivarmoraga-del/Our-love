@@ -151,7 +151,8 @@ body {
   filter: grayscale(0);
 }
 
-/* July single-image hover effect */
+/* June + July grayscale-to-color hover effect */
+.june-img,
 .july-img {
   --_g: 10%/45% 45% no-repeat conic-gradient(#000 0 0);
   mask:
@@ -163,6 +164,7 @@ body {
   transition: .3s linear;
   cursor: pointer;
 }
+.june-img:hover,
 .july-img:hover {
   --_i: 10%;
   filter: grayscale(0);
@@ -173,15 +175,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40vh;
-  margin-top: 60px;
-  background: #101010;
+  height: 100vh;
+  margin: 0;
+  background: #ffe6f0; /* matches your pink theme */
 }
 .wave-text span {
   display: inline-block;
-  font-size: 4rem;
+  font-size: 8rem; /* roughly half of OUR STORY title */
   font-weight: 900;
-  color: #fff;
+  color: #e63946;
   animation: wave 2s ease-in-out infinite;
 }
 .wave-text span:nth-child(1) { animation-delay: 0s; }
@@ -197,5 +199,5 @@ body {
 
 @keyframes wave {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-25px); }
 }
