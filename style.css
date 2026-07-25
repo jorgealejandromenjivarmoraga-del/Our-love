@@ -7,51 +7,161 @@ body {
 }
 
 /* Intro */
-.intro { height: 100vh; display: flex; justify-content: center; align-items: center; }
-.fade-title { font-size: 14vw; font-weight: 900; color: #e63946; animation: fadeIn 3s ease forwards; }
-@keyframes fadeIn { 0% {opacity:0; transform:scale(0.8);} 100% {opacity:1; transform:scale(1);} }
+.intro {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fade-title {
+  font-size: 14vw;
+  font-weight: 900;
+  color: #e63946;
+  animation: fadeIn 3s ease forwards;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
 
 /* Section */
-.section { display: flex; justify-content: space-between; padding: 80px 100px; gap: 80px; max-width: 1400px; margin: 0 auto; }
+.section {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 100px;
+  gap: 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
 .lifted { margin-top: -40px; }
 
 /* Image container */
-.image-container { width: 48%; text-align: center; }
-.image-hover-area { overflow: hidden; border-radius: 20px; display: inline-block; width: 100%; }
-.left-img, .right-img { width: 100%; border-radius: 20px; opacity: 1; transform: translateY(0); transition: opacity 1.5s ease, transform 1.5s ease; }
-.image-hover-area:hover .left-img, .image-hover-area:hover .right-img { transform: scale(1.05); }
+.image-container {
+  width: 48%;
+  text-align: center;
+}
+.image-hover-area {
+  overflow: hidden;
+  border-radius: 20px;
+  display: inline-block;
+  width: 100%;
+}
+.left-img, .right-img {
+  width: 100%;
+  border-radius: 20px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+.image-hover-area:hover .left-img,
+.image-hover-area:hover .right-img {
+  transform: scale(1.05);
+}
 
 /* Caption */
-.caption { margin-top: 25px; font-weight: 700; font-size: 1.2em; color: #333; position: relative; display: inline-block; text-align: center; }
-.hover-underline::after, .hover-underline::before { content: ''; position: absolute; width: 100%; height: 2px; background: linear-gradient(to right, #e63946, #ffb6c1); left: 0; transform: scaleX(0); transition: transform 0.4s ease-out; }
+.caption {
+  margin-top: 25px;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #333;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.hover-underline::after,
+.hover-underline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #e63946, #ffb6c1);
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.4s ease-out;
+}
 .hover-underline::before { top: -5px; transform-origin: left; }
 .hover-underline::after { bottom: -5px; transform-origin: right; }
-.image-hover-area:hover + .hover-underline::after, .image-hover-area:hover + .hover-underline::before { transform: scaleX(1); }
+.image-hover-area:hover + .hover-underline::after,
+.image-hover-area:hover + .hover-underline::before {
+  transform: scaleX(1);
+}
 
 /* Text blocks */
 .right-text, .left-text { width: 48%; }
-.section-title { font-size: 2.55em; font-weight: 900; color: #e63946; margin-bottom: 25px; }
-.section-body { font-size: 1.22em; line-height: 1.55; text-align: justify; }
+.section-title {
+  font-size: 2.55em;
+  font-weight: 900;
+  color: #e63946;
+  margin-bottom: 25px;
+}
+.section-body {
+  font-size: 1.22em;
+  line-height: 1.55;
+  text-align: justify;
+}
 
 /* Collage Section */
 .collage-section { margin-top: 20px; }
-.collage-container { position: relative; max-width: 1000px; margin: 0 auto; height: 650px; }
-.collage-container img { position: absolute; width: 300px; aspect-ratio: 1; cursor: pointer; transition: transform 0.5s ease, filter 0.5s ease; border-radius: 20px; }
+.collage-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 650px;
+}
+.collage-container img {
+  position: absolute;
+  width: 300px;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  border-radius: 20px;
+}
 .upper-left { top: 0; left: 0; }
 .upper-right { top: 0; right: 0; }
 .lower-left { bottom: 0; left: 0; }
 .lower-right { bottom: 0; right: 0; }
 
 /* Hover glow */
-.heart-shape:hover { filter: drop-shadow(0 0 20px #ff004c) drop-shadow(0 0 40px #ff004c) drop-shadow(0 0 80px #ff004c); transform: scale(1.05); }
-.square-shape:hover { filter: drop-shadow(0 0 20px #ff66b2) drop-shadow(0 0 40px #ff66b2) drop-shadow(0 0 80px #ff66b2); transform: scale(1.05); }
+.heart-shape:hover {
+  filter: drop-shadow(0 0 20px #ff004c)
+          drop-shadow(0 0 40px #ff004c)
+          drop-shadow(0 0 80px #ff004c);
+  transform: scale(1.05);
+}
+.square-shape:hover {
+  filter: drop-shadow(0 0 20px #ff66b2)
+          drop-shadow(0 0 40px #ff66b2)
+          drop-shadow(0 0 80px #ff66b2);
+  transform: scale(1.05);
+}
 
 /* Viewer overlay */
-.viewer { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: none; justify-content: center; align-items: center; z-index: 9999; }
+.viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
 .viewer.active { display: flex; }
-.viewer img { max-width: 90%; max-height: 90%; border-radius: 20px; }
-.close-btn { position: absolute; top: 20px; right: 30px; font-size: 40px; color: #fff; cursor: pointer; }
-
+.viewer img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+}
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
 
 /* Flip card effect (April only) */
 .card {
@@ -60,7 +170,7 @@ body {
   margin: 1rem auto;
   perspective: 1000px;
   cursor: pointer;
-  position: absolute; /* keep same positioning as collage images */
+  position: absolute;
 }
 .card-inner {
   position: relative;
@@ -69,11 +179,8 @@ body {
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
-.card:hover .card-inner {
-  transform: rotateY(180deg);
-}
-.card-front,
-.card-back {
+.card:hover .card-inner { transform: rotateY(180deg); }
+.card-front, .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -81,95 +188,22 @@ body {
   border-radius: 0.5rem;
   overflow: hidden;
 }
-.card-front img,
-.card-back img {
+.card-front img, .card-back img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.card-back {
-  transform: rotateY(180deg);
-}
-/* Flip card effect (April only) */
-.card {
-  width: 200px;
-  height: 250px;
-  margin: 1rem auto;
-  perspective: 1000px;
-  cursor: pointer;
-  position: absolute;
-}
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-.card:hover .card-inner {
-  transform: rotateY
-  
+.card-back { transform: rotateY(180deg); }
+
 /* Fine‑tune vertical alignment for May section only */
 .section:nth-of-type(5) .image-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 50px; /* lowers the image slightly */
+  margin-top: 50px;
 }
 
-/* June + July grayscale-to-color hover effect */
-.june-img,
-.july-img {
-  --_g: 10%/45% 45% no-repeat conic-gradient(#000 0 0);
-  mask:
-    left   var(--_i,) top    var(--_g),
-    bottom var(--_i,) left   var(--_g),
-    top    var(--_i,) right  var(--_g),
-    right  var(--_i,) bottom var(--_g);
-  filter: grayscale();
-  transition: .3s linear;
-  cursor: pointer;
-}
-.june-img:hover,
-.july-img:hover {
-  --_i: 10%;
-  filter: grayscale(0);
-}
-
-/* Ending wave animation */
-.wave-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background: #101010; /* dark background for contrast */
-  color: #fff;
-  font-family: 'Arial', sans-serif;
-}
-.wave-text span {
-  display: inline-block;
-  font-size: 14rem; /* roughly half of OUR STORY title */
-  font-weight: 900;
-  animation: wave 2s ease-in-out infinite;
-}
-.wave-text span:nth-child(1) { animation-delay: 0s; }
-.wave-text span:nth-child(2) { animation-delay: 0.2s; }
-.wave-text span:nth-child(3) { animation-delay: 0.4s; }
-.wave-text span:nth-child(4) { animation-delay: 0.6s; }
-.wave-text span:nth-child(5) { animation-delay: 0.8s; }
-.wave-text span:nth-child(6) { animation-delay: 1.0s; }
-.wave-text span:nth-child(7) { animation-delay: 1.2s; }
-.wave-text span:nth-child(8) { animation-delay: 1.4s; }
-.wave-text span:nth-child(9) { animation-delay: 1.6s; }
-.wave-text span:nth-child(10) { animation-delay: 1.8s; }
-
-@keyframes wave {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-  /* Override default zoom for June + July */
+/* Override zoom and apply grayscale-to-color hover for June + July */
 .june-img,
 .july-img {
   --_g: 10%/45% 45% no-repeat conic-gradient(#000 0 0);
@@ -191,7 +225,7 @@ body {
 .july-img:hover {
   --_i: 10%;
   filter: grayscale(0);
-  transform: none; /* cancel zoom effect */
+  transform: none !important;
 }
 
 /* Ending wave animation */
@@ -205,14 +239,12 @@ body {
   color: #fff;
   font-family: 'Arial', sans-serif;
 }
-
 .wave-text span {
   display: inline-block;
   font-size: 14rem; /* half of OUR STORY title */
   font-weight: 900;
   animation: wave 2s ease-in-out infinite;
 }
-
 .wave-text span:nth-child(1) { animation-delay: 0s; }
 .wave-text span:nth-child(2) { animation-delay: 0.2s; }
 .wave-text span:nth-child(3) { animation-delay: 0.4s; }
@@ -228,4 +260,3 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
 }
-
