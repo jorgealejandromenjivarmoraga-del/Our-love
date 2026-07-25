@@ -260,27 +260,6 @@ body {
   50% { transform: translateY(-20px); }
 }
 
-
-/* Restore collage layout for April–May */
-.collage-section {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.collage-container {
-  position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
-  height: 650px;
-}
-.collage-container img,
-.card {
-  position: absolute;
-  border-radius: 20px;
-  transition: transform 0.5s ease, filter 0.5s ease;
-}
-
 /* June + July grayscale-to-color hover effect */
 .june-img,
 .july-img {
@@ -303,6 +282,45 @@ body {
 .july-img:hover {
   --_i: 10%;
   filter: grayscale(0);
+
+/* Restore flip‑card functionality for April & May */
+.card {
+  width: 200px;
+  height: 250px;
+  margin: 1rem auto;
+  perspective: 1000px;
+  cursor: pointer;
+  position: absolute;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.card-front img,
+.card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+
   transform: none !important;
 }
 
