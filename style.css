@@ -260,3 +260,24 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
 }
+
+/* Restore collage layout for April–May */
+.collage-section {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.collage-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 650px;
+}
+.collage-container img,
+.card {
+  position: absolute;
+  border-radius: 20px;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
