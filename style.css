@@ -108,3 +108,10 @@ body {
 }
 .card:hover .card-inner {
   transform: rotateY
+/* Fine‑tune vertical alignment for May section only */
+.section:nth-of-type(5) .image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40px; /* lowers the image slightly */
+}
